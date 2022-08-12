@@ -86,8 +86,8 @@ img {
 }
 
 .cr-logo svg{
-    width: 200px;
-    height: 38px;
+    width: 108px;
+    height: 30px;
 }
 
 @media (min-width:360px) {
@@ -296,10 +296,6 @@ img {
 
 .menu-container>.footer-item {
     padding-bottom: 40px;
-}
-
-.menu-container .social-links {
-    transform: translateX(-20px);
 }
 
 .menu-items-header {
@@ -562,6 +558,10 @@ img {
     .footer-item-header.center {
         text-align: center;
     }
+
+    .social-links{
+        justify-content: space-between;
+    }
 }
 
 @media (min-width:1024px) {
@@ -595,10 +595,6 @@ img {
         text-align: left;
     }
 
-    .footer .social-links {
-        transform: translateX(-20px);
-    }
-
     .edition {
         padding: 20px 0px;
     }
@@ -615,11 +611,6 @@ img {
 
     .edition {
         padding: 0px;
-    }
-
-    .footer .social-links,
-    .menu-container .social-links {
-        transform: translateX(0px);
     }
 
     .social-link {
