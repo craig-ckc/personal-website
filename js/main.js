@@ -46,14 +46,22 @@ function menu() {
 
         active = active ? false : true
     })
+    $(".back-drop").click(() => {
+        menuControll(active)
+        menu_btn(active)
+
+        // To-do: available when on desktop
+        scrollLock(!active)
+
+        active = active ? false : true
+    })
 }
 
 function buttonHover() {
 
     const tl = gsap.timeline({ defaults: { duration: 0.4 } })
 
-    if ($(".btn").attr("data-fipple") == "false"){
-        console.log("locked button")
+    if ($(".btn").attr("data-fipple") == "false") {
         return
     }
 
@@ -151,15 +159,14 @@ function emailCheck(input) {
     if (field == null) return;
 
     field.addEventListener("focusout", () => {
+        if (field.value.length == 0) return
 
         if (field.value.match(mailformat)) {
             field.classList.remove("error")
             message.classList.add("active")
-            console.log("all good")
         } else {
             field.classList.add("error")
             message.classList.remove("active")
-            console.log("error")
         }
     });
 }
@@ -200,28 +207,21 @@ function intersect(observe, lookup, function1, function2) {
 
 function parallax() {
     $(".screenshot-preview").each((i, div) => {
-
-        if($(div).attr("data-parallax") == "true"){
+        if ($(div).attr("data-parallax") == "true") {
             var top = $(div).offset().top - $(window).scrollTop()
 
             var winHeight = $(window).height()
-    
+
             var divHeight = $(div).outerHeight()
-            
-            console.log("wokring")
-            
+
             inView(div, () => {
                 var child = $(div).find('img');
-    
-                var x = (winHeight - 2 * top - divHeight) / (winHeight + divHeight)
-    
-                child.css({ "-webkit-transform": `translate3d(0px,${x * 30}%, 0px)`, "will-change": "transform" });
 
-                console.log("parallax")
+                var x = (winHeight - 2 * top - divHeight) / (winHeight + divHeight)
+
+                child.css({ "-webkit-transform": `translate3d(0px,${x * 30}%, 0px)`, "will-change": "transform" });
             })
         }
-
-        
     })
 
     requestAnimationFrame(parallax)
@@ -230,9 +230,7 @@ function parallax() {
 function checkbox() {
     $(".checkbox-btn").click(function () {
         var b = $(this).siblings("input").prop('checked')
-
         var btn = $(this)
-
         var text = $(this).find(".btn-text")
         var fill = $(this).find(".btn-fill")
 
@@ -240,21 +238,27 @@ function checkbox() {
 
         if (b) {
             btn.attr("data-fipple", "false")
-            console.log(b, "locked")
-            fill.css({background: "var(--black)"})
+            fill.css({ background: "var(--black)" })
             text.removeClass('white')
             tl.to(fill, { transform: 'translate3d(0,-76%,0)' })
-            .set(fill, { transform: 'translate3d(0,76%,0)' })
+                .set(fill, { transform: 'translate3d(0,76%,0)' })
         } else {
             btn.attr("data-fipple", "true")
-            fill.css({background: "var(--black)"})
-            console.log(b, "unlocked")
+            fill.css({ background: "var(--black)" })
             text.addClass('white')
-            
+
             tl.to(fill, { transform: 'translate3d(0,0%,0)' })
 
         }
     })
+}
+
+function textIntro() {
+    var s = new SplitType('.intro', { types: 'lines' });
+    var tl = new TimelineMax({ delay: 0.5 });
+
+    if (s != null)
+        tl.staggerFromTo(s.lines, 0.6, { opacity: 0, yPercent: 80, rotationX: 90 }, { opacity: 1, yPercent: 0, rotationX: 0, ease: 'Quad.easeOut' }, 0.15, 'enter');
 }
 
 $(window).on("load", () => {
@@ -269,15 +273,10 @@ $(window).on("load", () => {
         cursor()
         magenet()
         buttonHover()
-        
-        
+
         footerScroll()
         parallax()
     }
-    
-    
-    
-    
     $(window).scroll(() => {
         $(document).prop({ '--scroll-y': `${window.scrollY}px` })
     })
@@ -292,8 +291,9 @@ $(window).on("load", () => {
     })
 
     emailCheck("email");
-    
+
     menu()
     checkbox()
     menu_item()
+    // textIntro()
 });

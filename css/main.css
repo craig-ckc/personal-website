@@ -179,6 +179,11 @@ img {
     color: var(--blue);
 }
 
+.line{
+    width: auto !important;
+    transform-style: preserve-3d;
+}
+
 .lh-100 {
     line-height: 100%;
 }
@@ -936,30 +941,7 @@ img {
 /* #endregion */
 
 
-/* #region Custome Scrollbar  */
-.scrolltrack {
-    display: none;
-    position: fixed;
-    z-index: 995;
-    right: 3px;
-    height: 100vh;
-    width: 8px;
 
-}
-
-.scrollbar {
-    width: 100%;
-    background: #333;
-    border-radius: 4px;
-    transform: translateY(10px);
-    transition: opacity 0.3s var(--ease);
-}
-
-.scrollbar.disappear {
-    opacity: 0;
-}
-
-/* #endregion */
 
 
 /* #region Screenshort and Splitview Section  */
