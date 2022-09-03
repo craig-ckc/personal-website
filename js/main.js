@@ -265,8 +265,8 @@ function textIntro() {
     var tml = gsap.timeline({ defaults: { duration: 1.2, ease: Power2.easeOut } })
 
     tml.to(".intro-nav", { opacity: 1 })
-        .to(".intro-header", { opacity: 1, yPercent: 0 }, "-=0.4")
-        .to(".intro-body", { opacity: 1, yPercent: 0 }, "-=0.4")
+        .to(".intro-header", { opacity: 1, yPercent: -40 }, "-=0.4")
+        .to(".intro-body", { opacity: 1, yPercent: -40 }, "-=0.4")
 
 }
 
