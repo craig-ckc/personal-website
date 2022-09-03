@@ -10,9 +10,11 @@ let scrolltrackHover = false;
 let cointainer = '.scroll-wrap';
 let body = document.body;
 
-function lerp(start, end, t) {
-    return start * (1 - t) + end * t;
-}
+// function lerp(start, end, t) { 
+//     return start * (1 - t) + end * t;
+// }
+
+const lerp = (start, end, t) => { return start * (1 - t) + end * t }
 
 function resize(el, height) {
     el.style.height = `${height}px`

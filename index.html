@@ -20,15 +20,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Custome Style -->
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/smooth-scroll.css">
+    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/smooth-scroll.min.css">
 
 </head>
 
 <body>
-
     <div class="content-wrap">
-        <nav class="menu-section">
+        <nav class="menu-section intro-nav">
             <div class="menu-logo">
                 <div class="cr-logo">
                     <a href="/">
@@ -56,7 +55,7 @@
                                 <div class="menu-items-header p-05 lh-100">Menu</div>
                                 <ul role="list" class="menu-links">
                                     <li class="menu-item h-02 lh-100">
-                                        <a href="/index.html" class="text-item">
+                                        <a href="/" class="text-item">
                                             <span class="text-item-title">
                                                 <span data-text="Home">Home</span>
                                             </span>
@@ -151,7 +150,7 @@
         </div>
 
         <main class="scroll-wrap">
-            <div class="nav-section">
+            <div class="nav-section intro-nav">
                 <div class="nav-container">
                     <div class="cr-logo">
                         <a href="/">
@@ -169,10 +168,10 @@
                 </div>
             </div>
 
-            <Section class="section">
+            <Section class="section home-header">
                 <div class="container">
-                    <div class="header">
-                        <h1 class="h-01 intro">I’m <span class="em">Craig Chihururu.</span> A digital brand and
+                    <div class="header intro-header">
+                        <h1 class="h-01">I’m <span class="em">Craig Chihururu.</span> A digital brand and
                             product designer... <span class="em">and an open introvert</span></h1>
 
                     </div>
@@ -181,7 +180,7 @@
 
             <section class="section">
                 <div class="container">
-                    <div class="description sized">
+                    <div class="description sized intro-body">
                         <div class="description-text">
                             <h2 class="p-01">Open introvert motivated by empathy and devoted to creativity. I’m here to
                                 help with the difficult decisions to create brands and products that connect with
@@ -214,7 +213,8 @@
                                     <h4 class="h-03">Escape the ordinary</h3>
                                         <div class="project-tags">branding, web design</div>
                                 </div>
-                                <div class="project-thumbnail flex-12 img-full">
+                                <div class="project-thumbnail cursor-hover flex-12 img-full"
+                                    data-cursor-text="Coming Soon">
                                     <a class="screenshot-preview" data-parallax="false">
                                         <img src="/img/work/lalunary/main.png" alt="">
                                     </a>
@@ -226,7 +226,8 @@
                                     <h4 class="h-03">A game you can test your brain with friends</h3>
                                         <div class="project-tags">branding, design, mobile, product</div>
                                 </div>
-                                <div class="project-thumbnail flex-12 img-full">
+                                <div class="project-thumbnail cursor-hover flex-12 img-full"
+                                    data-cursor-text="Coming Soon">
                                     <a class="screenshot-preview" data-parallax="false">
                                         <img src="/img/work/qwirkers/main.jpg" alt="">
                                     </a>
@@ -238,7 +239,8 @@
                                     <h4 class="h-03">Tribes family on the digital move</h3>
                                         <div class="project-tags">branding, design</div>
                                 </div>
-                                <div class="project-thumbnail flex-12 img-full">
+                                <div class="project-thumbnail cursor-hover flex-12 img-full"
+                                    data-cursor-text="Coming Soon">
                                     <a class="screenshot-preview" data-parallax="false">
                                         <img src="/img/work/tribes/main.jpg" alt="">
                                     </a>
@@ -253,6 +255,43 @@
                                     <span class="btn-text p-05 lh-100">View all projects</span>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section home-slider">
+                <div class="container">
+                    <div class="description sized">
+                        <div class="header sized">
+                            <h2 class="h-01">Daily Inspiration</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-wrapper cursor-hover" data-cursor-text="Drag">
+                    <div class="slider">
+                        <div class="slider-item">
+                            <div class="img-div"></div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="img-div"></div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="img-div"></div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="img-div"></div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="img-div"></div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="img-div"></div>
                         </div>
                     </div>
                 </div>
@@ -341,7 +380,6 @@
         </main>
     </div>
 
-
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
         integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
@@ -352,8 +390,9 @@
     <!-- Minified UMD bundle -->
     <script src="https://unpkg.com/split-type"></script>
 
-    <script src="/js/smooth-scroll.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/horizontal-scroll.min.js"></script>
+    <script src="/js/smooth-scroll.min.js"></script>
+    <script src="/js/main.min.js"></script>
 </body>
 
 </html>

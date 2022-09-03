@@ -41,7 +41,6 @@ function menu() {
         menuControll(active)
         menu_btn(active)
 
-        // To-do: available when on desktop
         scrollLock(!active)
 
         active = active ? false : true
@@ -50,7 +49,6 @@ function menu() {
         menuControll(active)
         menu_btn(active)
 
-        // To-do: available when on desktop
         scrollLock(!active)
 
         active = active ? false : true
@@ -105,12 +103,13 @@ function magenet() {
 function cursor() {
     var cursor = $(".cr-cursor")
 
-    $(".project-thumbnail").hover(
-        () => {
+    $(".cursor-hover").hover(
+        function () {
+            cursor.find("span").text($(this).attr("data-cursor-text"))
             cursor.css({ "--size": "100px", "background-color": "rgba(255, 255, 255, 0.4)", "border-width": "2px" })
             cursor.find('span').css({ "font-size": "16px", "line-height": "100%" })
         },
-        () => {
+        function () {
             cursor.css({ "--size": "7px", "background-color": "var(--black)", "border-width": "0px" })
             cursor.find('span').css({ "font-size": "0px", "line-height": "0%" })
         }
@@ -124,6 +123,15 @@ function cursor() {
             cursor.css({ "--size": "7px", "background-color": "var(--black)", "backdrop-filter": "blur(5px)" })
         }
     )
+
+    $("window").mouseleave(function () {
+        console.log("mouse out")
+        cursor.addClass("zero")
+    });
+    $("window").mouseenter(function () {
+        console.log("mouse in")
+        cursor.removeClass("zero")
+    });
 
 }
 
@@ -254,11 +262,12 @@ function checkbox() {
 }
 
 function textIntro() {
-    var s = new SplitType('.intro', { types: 'lines' });
-    var tl = new TimelineMax({ delay: 0.5 });
+    var tml = gsap.timeline({ defaults: { duration: 1.2, ease: Power2.easeOut } })
 
-    if (s != null)
-        tl.staggerFromTo(s.lines, 0.6, { opacity: 0, yPercent: 80, rotationX: 90 }, { opacity: 1, yPercent: 0, rotationX: 0, ease: 'Quad.easeOut' }, 0.15, 'enter');
+    tml.from(".intro-nav", { opacity: 0 })
+        .from(".intro-header", { opacity: 0, yPercent: 40 }, "-=0.4")
+        .from(".intro-body", { opacity: 0, yPercent: 40 }, "-=0.4")
+
 }
 
 $(window).on("load", () => {
@@ -281,6 +290,21 @@ $(window).on("load", () => {
         $(document).prop({ '--scroll-y': `${window.scrollY}px` })
     })
 
+    if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
+        $slider.addEventListener('touchstart', handleTouchStart)
+        $slider.addEventListener('touchmove', handleTouchMove)
+        $slider.addEventListener('touchend', handleTouchEnd)
+
+        $slider.addEventListener('mousedown', handleTouchStart)
+        $slider.addEventListener('mousemove', handleTouchMove)
+        $slider.addEventListener('mouseleave', handleTouchEnd)
+        $slider.addEventListener('mouseup', handleTouchEnd)
+
+        $slider.addEventListener('selectstart', () => { return false })
+
+        render()
+    }
+
     custOnScroll(() => {
         intersect(
             ".menu-toggle .toggle-btn",
@@ -295,5 +319,15 @@ $(window).on("load", () => {
     menu()
     checkbox()
     menu_item()
-    // textIntro()
+    textIntro()
+    imgResource()
 });
+
+
+function imgResource(){
+    let images = [...document.querySelectorAll(".img-div")]
+
+    images.forEach((img, index)=> {
+        img.style.backgroundImage = `url(/img/slides/${index + 1}.jpg)`
+    }) 
+}
