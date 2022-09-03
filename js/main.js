@@ -264,9 +264,9 @@ function checkbox() {
 function textIntro() {
     var tml = gsap.timeline({ defaults: { duration: 1.2, ease: Power2.easeOut } })
 
-    tml.from(".intro-nav", { opacity: 0 })
-        .from(".intro-header", { opacity: 0, yPercent: 40 }, "-=0.4")
-        .from(".intro-body", { opacity: 0, yPercent: 40 }, "-=0.4")
+    tml.to(".intro-nav", { opacity: 1 })
+        .to(".intro-header", { opacity: 1, yPercent: 0 }, "-=0.4")
+        .to(".intro-body", { opacity: 1, yPercent: 0 }, "-=0.4")
 
 }
 
