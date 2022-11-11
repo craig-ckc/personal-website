@@ -1107,12 +1107,12 @@ img {
     display: grid;
     grid-auto-columns: 1fr;
     grid-column-gap: 5rem;
-    grid-row-gap: 4rem;
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
 }
-.description.split.challenge{
+
+.description.split.challenge {
     grid-template-columns: 0.5fr 1.5fr;
 }
 
@@ -1153,7 +1153,11 @@ img {
         width: 100%;
     }
 
-    .description.split,
+    .description.split, .description.split.challenge {
+        grid-template-columns: 1fr;
+    }
+    
+
     .row {
         flex-direction: column;
     }
@@ -1403,7 +1407,7 @@ img {
 .next-case {
     position: relative;
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: 100vw;
     padding-top: var(--v-pad);
     padding-bottom: var(--v-pad);
@@ -1437,6 +1441,7 @@ img {
     .next-case {
         background-size: 200vw;
     }
+
     .next-case:hover {
         background-size: 200vw;
     }
