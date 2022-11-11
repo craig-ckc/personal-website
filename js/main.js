@@ -270,6 +270,111 @@ function textIntro() {
 
 }
 
+function imgResource(){
+    let images = [...document.querySelectorAll(".img-div")]
+
+    images.forEach((img, index)=> {
+        img.style.backgroundImage = `url(/img/slides/${index + 1}.jpg)`
+    }) 
+}
+
+// Image Hover effect
+var width = $(".img").width();
+
+var qoutient = 1080 / 1920
+
+$(".img").height(qoutient * width)
+
+$(window).on('resize', function () {
+    var width = $(".img").width();
+    var qoutient = 1080 / 1920
+    $(".img").height(qoutient * width)
+});
+
+function hover() {
+    var img = $(".img");
+
+    img.mousemove(function (e) {
+        var left = e.pageX - $(this).data("xPos");;
+        var top = e.pageY - $(this).data("yPos");
+        var xPerc = ((left - $(this).data("itemWidth") / 2) / $(this).data("itemWidth")) * 200;
+        var yPerc = ((top - $(this).data("itemHeight") / 2) / $(this).data("itemHeight")) * 200;
+
+        var origin = "center center -300";
+
+        TweenMax.to($(this).data("imgOuter"), 3, {
+            rotationX: 0.1 * yPerc,
+            rotationY: -0.1 * xPerc,
+            transformOrigin: origin,
+            ease: Expo.easeOut,
+        });
+    });
+
+    img.each(function () {
+        $(this).data("xPos", $(this).offset().left);
+        $(this).data("yPos", $(this).offset().top);
+        $(this).data("itemWidth", $(this).width());
+        $(this).data("itemHeight", $(this).height());
+        $(this).data("imgOuter", $(this).find(".img-inner"));
+    });
+
+    img.on("mouseleave", function () {
+        const tl = gsap.timeline({ defualts: { ease: "power4.out", duration: .1, } })
+
+        tl.to($(this).data("imgOuter"), 3, { rotationX: 0, rotationY: 0 });
+
+    });
+
+    console.log("Workig")
+}
+
+function animteHover() {
+    var $img = $(".img");
+
+    $img.mousemove(function (e) {
+        var xPos = $(this).data("xPos");
+        var yPos = $(this).data("yPos");
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+        var left = mouseX - xPos;
+        var top = mouseY - yPos;
+        var origin = "center center -300";
+        var xPerc =
+            ((left - $(this).data("itemWidth") / 2) / $(this).data("itemWidth")) * 200;
+        var yPerc =
+            ((top - $(this).data("itemHeight") / 2) / $(this).data("itemHeight")) * 200;
+
+        TweenMax.to($(this).data("imgOuter"), 3, {
+            rotationX: 0.1 * yPerc,
+            rotationY: -0.1 * xPerc,
+            transformOrigin: origin,
+            ease: Expo.easeOut,
+        });
+    });
+
+    $img.each(function () {
+        $(this).data("xPos", $(this).offset().left);
+        $(this).data("yPos", $(this).offset().top);
+        $(this).data("itemWidth", $(this).width());
+        $(this).data("itemHeight", $(this).height());
+        $(this).data("imgOuter", $(this).find(".img-inner"));
+    });
+
+    $img.on("mouseleave", function () {
+        TweenMax.to($(this).data("imgOuter"), 3, {
+            rotationX: 0,
+            rotationY: 0,
+            transformOrigin: origin,
+            ease: Expo.easeOut,
+            duration: 1
+        });
+    });
+}
+
+
+
+
+
 $(window).on("load", () => {
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
         $(document).mousemove(e => {
@@ -321,13 +426,6 @@ $(window).on("load", () => {
     menu_item()
     textIntro()
     imgResource()
+    
+    hover();
 });
-
-
-function imgResource(){
-    let images = [...document.querySelectorAll(".img-div")]
-
-    images.forEach((img, index)=> {
-        img.style.backgroundImage = `url(/img/slides/${index + 1}.jpg)`
-    }) 
-}

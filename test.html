@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icon-32x32.png">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/img/icon-16x16.png">
-    <title>Contact - Craig Chihururu</title>
+    <title>Brand and Product Designer - Craig Chihururu</title>
 
     <meta name="description"
         content="Open introvert motivated by empathy and devoted to creativity. I’m here to help with the difficult decisions to create brands and products that connect with people.">
@@ -23,10 +23,48 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/smooth-scroll.css">
 
+    <style>
+        .img {
+            width: 100%;
+            height: 500px;
+            perspective: 400px;
+        }
+
+        .img-wrapper {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            /* background: black; */
+            overflow: hidden;
+            /* box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.3); */
+            transform-style: preserve-3d;
+        }
+
+        .img-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .img-holder {
+            transform: scale(1.15);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease-out;
+        }
+
+        .img-wrapper:hover .img-holder {
+            transform: scale(1.2);
+        }
+    </style>
+
 </head>
 
 <body>
-
     <div class="content-wrap">
         <nav class="menu-section intro-nav">
             <div class="menu-logo">
@@ -169,132 +207,150 @@
                 </div>
             </div>
 
-            <Section class="section">
-                <div class="container">
-                    <div class="header intro-header sized">
-                        <h1 class="h-01">Hi! Tell me what you have in mind 👋</h2>
+            <div class="body">
+                <Section class="section home-header">
+                    <div class="container">
+                        <div class="header intro-header">
+                            <h1 class="h-01">I’m <span class="em">Craig Chihururu.</span> A digital brand and
+                                product designer... <span class="em">and an open introvert</span></h1>
+
+                        </div>
+                    </div>
+                </Section>
+
+                <section class="section">
+                    <div class="container">
+                        <div class="description sized intro-body">
+                            <div class="description-text">
+                                <h2 class="p-01">Open introvert motivated by empathy and devoted to creativity. I’m here
+                                    to
+                                    help with the difficult decisions to create brands and products that connect with
+                                    people.
+                                </h2>
+                            </div>
+                            <div class="cta-action">
+                                <a href="/contact.html" class="btn" data-magnetic data-fipple="true">
+                                    <span class="magenet-area" data-magnetic-strength="0.2"></span>
+                                    <div class="btn-content magnet-content">
+                                        <span class="btn-fill"></span>
+                                        <span class="btn-text p-05 lh-100">Let’s work together</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="container">
+                        <div class="selected-projects">
+                            <div class="projects-header">
+                                <h2 class="h-01"><span class="outline">selected</span><br>projects</h2>
+                            </div>
+                            <div class="projects-preview">
+                                <div class="project">
+                                    <div class="project-context flex-08">
+                                        <h3 class="p-04">La Lunary</h3>
+                                        <h4 class="h-03">Escape the ordinary</h3>
+                                            <div class="project-tags">branding, web design</div>
+                                    </div>
+                                    <div class="project-thumbnail cursor-hover flex-12 img-full"
+                                        data-cursor-text="View project">
+                                        <a href="/work/qwirkers.html">
+                                            <div class="img">
+                                                <div class="img-wrapper">
+                                                    <div class="img-inner">
+                                                        <img class="img-holder" src="/img/work/qwirkers/main.png"
+                                                            alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cta-action f-center">
+                                <a href="/work.html" class="btn" data-magnetic data-fipple="true">
+                                    <span class="magenet-area" data-magnetic-strength="0.2"></span>
+                                    <div class="btn-content magnet-content">
+                                        <span class="btn-fill"></span>
+                                        <span class="btn-text p-05 lh-100">View all projects</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section home-slider">
+                    <div class="container">
+                        <div class="description sized">
+                            <div class="header sized">
+                                <h2 class="h-01">Daily Inspiration</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-wrapper cursor-hover" data-cursor-text="Drag">
+                        <div class="slider">
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="img-div"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-body">
+                    <div class="container">
+                        <div class="colaboration">
+                            <div class="colab-header">
+                                <h2 class="h-01">Have an idea?</h2>
+                                <a href="/contact.html" class="h-02">Let’s work Together</a>
+                            </div>
+                            <div class="cta-action">
+                                <a href="/contact.html" class="btn" data-magnetic data-fipple="true">
+                                    <span class="magenet-area" data-magnetic-strength="0.2"></span>
+                                    <div class="btn-content magnet-content">
+                                        <span class="btn-fill"></span>
+                                        <span class="btn-text p-05 lh-100">Let’s work together</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-details">
+                            <a href="mailto:craigchihururu@gmail.com" class="contact-item">
+                                <span class="p-04">craigchihururu@gmail.com</span>
+                            </a>
+                            <a href="tel:+27840875591" class="contact-item">
+                                <span class="p-04">+27840875591</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </Section>
-
-            <section id="form-section" class="section">
-                <div class="container">
-                    <div class="request-form intro-body">
-                        <form action="" method="" enctype="">
-                            <div class="form-group">
-                                <div class="form-label p-04">What do you need with ...</div>
-                                <div class="checkbox-group">
-                                    <div class="checkbox cb-checkbox_rounded" data-magnetic>
-                                        <label>
-                                            <input type="checkbox" name="service[]" value="design-scratch">
-                                            <span class="checkbox-btn" data-magnetic data-fipple="false">
-                                                <span class="magenet-area small" data-magnetic-strength="0.2"></span>
-                                                <div class="btn-content magnet-content">
-                                                    <span class="btn-fill"></span>
-                                                    <span class="btn-text p-05 lh-100">Design from scratch</span>
-                                                </div>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="checkbox cb-checkbox_rounded" data-magnetic>
-                                        <label>
-                                            <input type="checkbox" name="service[]" value="redesign">
-                                            <span class="checkbox-btn" data-magnetic data-fipple="false">
-                                                <span class="magenet-area small" data-magnetic-strength="0.2"></span>
-                                                <div class="btn-content magnet-content">
-                                                    <span class="btn-fill"></span>
-                                                    <span class="btn-text p-05 lh-100">Redesign</span>
-                                                </div>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="checkbox cb-checkbox_rounded" data-magnetic>
-                                        <label>
-                                            <input type="checkbox" name="service[]" value="brand-design">
-                                            <span class="checkbox-btn" data-magnetic data-fipple="false">
-                                                <span class="magenet-area small" data-magnetic-strength="0.2"></span>
-                                                <div class="btn-content magnet-content">
-                                                    <span class="btn-fill"></span>
-                                                    <span class="btn-text p-05 lh-100">Branding</span>
-                                                </div>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="checkbox cb-checkbox_rounded" data-magnetic>
-                                        <label>
-                                            <input type="checkbox" name="service[]" value="product-design">
-                                            <span class="checkbox-btn" data-magnetic data-fipple="false">
-                                                <span class="magenet-area small" data-magnetic-strength="0.2"></span>
-                                                <div class="btn-content magnet-content">
-                                                    <span class="btn-fill"></span>
-                                                    <span class="btn-text p-05 lh-100">Product Design</span>
-                                                </div>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="checkbox cb-checkbox_rounded" data-magnetic>
-                                        <label>
-                                            <input type="checkbox" name="service[]" value="web-development">
-                                            <span class="checkbox-btn" data-magnetic data-fipple="false">
-                                                <span class="magenet-area small" data-magnetic-strength="0.2"></span>
-                                                <div class="btn-content magnet-content">
-                                                    <span class="btn-fill"></span>
-                                                    <span class="btn-text p-05 lh-100">Web development</span>
-                                                </div>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-form">
-                                    <input class="text-input" type="text" name="name" placeholder="Your name"
-                                        required="" aria-label="Your name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-form">
-                                    <input class="text-input" type="email" name="email" placeholder="Your email"
-                                        required="" aria-label="Your email">
-                                    <p class="error-message paragraph active">This email is a bit off</p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-form">
-                                    <textarea class="text-input" id="my-text" name="mess"
-                                        placeholder="Tell me about your project" rows="1"
-                                        oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"; resize(document.body, $(cointainer).outerHeight())'
-                                        spellcheck="true"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="cta-action">
-                                    <button class="btn cb-btn_send" type="submit" data-magnetic="">
-                                        <span class="magenet-area" data-magnetic-strength="0.2"></span>
-                                        <div class="btn-content magnet-content">
-                                            <span class="btn-fill"></span>
-                                            <span class="btn-text p-05 lh-100">Send request</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="contact-details">
-                        <a href="mailto:craigchihururu@gmail.com" class="contact-item">
-                            <span class="p-04">craigchihururu@gmail.com</span>
-                        </a>
-                        <a href="tel:+27840875591" class="contact-item">
-                            <span class="p-04">+27840875591</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="">
                 <div class="footer-bottom">
                     <div class="container">
-                        <div class="bottom-content black">
+                        <div class="bottom-content">
                             <div class="footer-item">
                                 <div class="footer-item-header center p-05 lh-100">Version</div>
                                 <div class="edition p-05">2022 © Edition</div>
@@ -303,7 +359,7 @@
                                 <div class="footer-item-header center p-05 lh-100">Social Links</div>
                                 <div class="social-links">
                                     <a href="https://www.instagram.com/ckc.designes/" target="_blank"
-                                        class="text-item social-item link p-05 lh-100 social-link black-text">
+                                        class="text-item social-item link p-05 lh-100 social-link">
                                         <span class="text-item-title social-item-title">
                                             <span data-text="Instagram">Instagram</span>
                                         </span>
@@ -312,7 +368,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://dribbble.com/craigkc" target="_blank"
-                                        class="text-item social-item link p-05 lh-100 social-link black-text">
+                                        class="text-item social-item link p-05 lh-100 social-link">
                                         <span class="text-item-title social-item-title">
                                             <span data-text="Dribbble">Dribbble</span>
                                         </span>
@@ -321,7 +377,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://www.linkedin.com/in/craig-chihururu/" target="_blank"
-                                        class="text-item social-item link p-05 lh-100 social-link black-text">
+                                        class="text-item social-item link p-05 lh-100 social-link">
                                         <span class="text-item-title social-item-title">
                                             <span data-text="LinkedIn">LinkedIn</span>
                                         </span>
@@ -330,7 +386,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://www.behance.net/craigchihururu" target="_blank"
-                                        class="text-item social-item link p-05 lh-100 social-link black-text">
+                                        class="text-item social-item link p-05 lh-100 social-link">
                                         <span class="text-item-title social-item-title">
                                             <span data-text="Behance">Behance</span>
                                         </span>
@@ -347,7 +403,6 @@
         </main>
     </div>
 
-
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
         integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
@@ -355,8 +410,108 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         referrerpolicy="no-referrer"></script>
 
+    <!-- Minified UMD bundle -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script src="/js/horizontal-scroll.js"></script>
     <script src="/js/smooth-scroll.js"></script>
     <script src="/js/main.js"></script>
+
+    <script>
+        hover();
+
+        var width = $(".img").width();
+
+        var qoutient = 1080 / 1920
+
+        $(".img").height(qoutient * width)
+
+        $(window).on('resize', function () {
+            var width = $(".img").width();
+            var qoutient = 1080 / 1920
+            $(".img").height(qoutient * width)
+        });
+
+        function hover() {
+            var img = $(".img");
+
+            img.mousemove(function (e) {
+                var left = e.pageX - $(this).data("xPos");;
+                var top = e.pageY - $(this).data("yPos");
+                var xPerc = ((left - $(this).data("itemWidth") / 2) / $(this).data("itemWidth")) * 200;
+                var yPerc = ((top - $(this).data("itemHeight") / 2) / $(this).data("itemHeight")) * 200;
+
+                var origin = "center center -300";
+
+                TweenMax.to($(this).data("imgOuter"), 3, {
+                    rotationX: 0.1 * yPerc,
+                    rotationY: -0.1 * xPerc,
+                    transformOrigin: origin,
+                    ease: Expo.easeOut,
+                });
+            });
+
+            img.each(function () {
+                $(this).data("xPos", $(this).offset().left);
+                $(this).data("yPos", $(this).offset().top);
+                $(this).data("itemWidth", $(this).width());
+                $(this).data("itemHeight", $(this).height());
+                $(this).data("imgOuter", $(this).find(".img-inner"));
+            });
+
+            img.on("mouseleave", function () {
+                const tl = gsap.timeline({ defualts: { ease: "power4.out", duration: .1, } })
+
+                tl.to($(this).data("imgOuter"), 3, { rotationX: 0, rotationY: 0 });
+
+            });
+
+        }
+
+        function animteHover() {
+            var $img = $(".img");
+
+            $img.mousemove(function (e) {
+                var xPos = $(this).data("xPos");
+                var yPos = $(this).data("yPos");
+                var mouseX = e.pageX;
+                var mouseY = e.pageY;
+                var left = mouseX - xPos;
+                var top = mouseY - yPos;
+                var origin = "center center -300";
+                var xPerc =
+                    ((left - $(this).data("itemWidth") / 2) / $(this).data("itemWidth")) * 200;
+                var yPerc =
+                    ((top - $(this).data("itemHeight") / 2) / $(this).data("itemHeight")) * 200;
+
+                TweenMax.to($(this).data("imgOuter"), 3, {
+                    rotationX: 0.1 * yPerc,
+                    rotationY: -0.1 * xPerc,
+                    transformOrigin: origin,
+                    ease: Expo.easeOut,
+                });
+            });
+
+            $img.each(function () {
+                $(this).data("xPos", $(this).offset().left);
+                $(this).data("yPos", $(this).offset().top);
+                $(this).data("itemWidth", $(this).width());
+                $(this).data("itemHeight", $(this).height());
+                $(this).data("imgOuter", $(this).find(".img-inner"));
+            });
+
+            $img.on("mouseleave", function () {
+                TweenMax.to($(this).data("imgOuter"), 3, {
+                    rotationX: 0,
+                    rotationY: 0,
+                    transformOrigin: origin,
+                    ease: Expo.easeOut,
+                    duration: 1
+                });
+            });
+        }
+    
+    </script>
 </body>
 
 </html>

@@ -1104,8 +1104,16 @@ img {
 }
 
 .description.split {
-    display: flex;
-    width: 100%
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+}
+.description.split.challenge{
+    grid-template-columns: 0.5fr 1.5fr;
 }
 
 .description.split .header {
@@ -1379,7 +1387,7 @@ img {
 
 .caption {
     text-align: center;
-    padding: 0px 8rem;
+    padding: 0px 5rem;
 }
 
 @media (min-width: 360px) {
@@ -1438,4 +1446,39 @@ img {
     height: 100%;
     width: 100%;
     backdrop-filter: grayscale(1);
+}
+
+/* For image hover effect */
+.img {
+    width: 100%;
+    perspective: 400px;
+}
+
+.img-wrapper {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.img-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.img-holder {
+    transform: scale(1.15);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease-out;
+}
+
+.img-wrapper:hover .img-holder {
+    transform: scale(1.2);
 }
