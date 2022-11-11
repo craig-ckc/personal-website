@@ -1157,7 +1157,6 @@ img {
         grid-template-columns: 1fr;
     }
     
-
     .row {
         flex-direction: column;
     }
@@ -1174,7 +1173,12 @@ img {
         width: 75%;
     }
 
-    .description.split,
+    .description.split {
+        grid-template-columns: 1fr 1fr;
+    }
+    .description.split.challenge {
+        grid-template-columns: 0.7fr 1.3fr;
+    }
     .row {
         flex-direction: row;
     }
