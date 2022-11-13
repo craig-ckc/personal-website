@@ -180,13 +180,13 @@
             <section id="form-section" class="section">
                 <div class="container">
                     <div class="request-form intro-body">
-                        <form action="" method="" enctype="">
+                        <form name="contact" method="POST" data-netlify="true">
                             <div class="form-group">
                                 <div class="form-label p-04">What do you need with ...</div>
                                 <div class="checkbox-group">
                                     <div class="checkbox cb-checkbox_rounded" data-magnetic>
                                         <label>
-                                            <input type="checkbox" name="service[]" value="design-scratch">
+                                            <input type="checkbox" name="services" value="Design from scratch">
                                             <span class="checkbox-btn" data-magnetic data-fipple="false">
                                                 <span class="magenet-area small" data-magnetic-strength="0.2"></span>
                                                 <div class="btn-content magnet-content">
@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="checkbox cb-checkbox_rounded" data-magnetic>
                                         <label>
-                                            <input type="checkbox" name="service[]" value="redesign">
+                                            <input type="checkbox" name="services" value="Redesign">
                                             <span class="checkbox-btn" data-magnetic data-fipple="false">
                                                 <span class="magenet-area small" data-magnetic-strength="0.2"></span>
                                                 <div class="btn-content magnet-content">
@@ -210,7 +210,7 @@
                                     </div>
                                     <div class="checkbox cb-checkbox_rounded" data-magnetic>
                                         <label>
-                                            <input type="checkbox" name="service[]" value="brand-design">
+                                            <input type="checkbox" name="services" value="Branding">
                                             <span class="checkbox-btn" data-magnetic data-fipple="false">
                                                 <span class="magenet-area small" data-magnetic-strength="0.2"></span>
                                                 <div class="btn-content magnet-content">
@@ -222,7 +222,7 @@
                                     </div>
                                     <div class="checkbox cb-checkbox_rounded" data-magnetic>
                                         <label>
-                                            <input type="checkbox" name="service[]" value="product-design">
+                                            <input type="checkbox" name="services" value="Product Design">
                                             <span class="checkbox-btn" data-magnetic data-fipple="false">
                                                 <span class="magenet-area small" data-magnetic-strength="0.2"></span>
                                                 <div class="btn-content magnet-content">
@@ -234,7 +234,7 @@
                                     </div>
                                     <div class="checkbox cb-checkbox_rounded" data-magnetic>
                                         <label>
-                                            <input type="checkbox" name="service[]" value="web-development">
+                                            <input type="checkbox" name="services" value="Web development">
                                             <span class="checkbox-btn" data-magnetic data-fipple="false">
                                                 <span class="magenet-area small" data-magnetic-strength="0.2"></span>
                                                 <div class="btn-content magnet-content">
@@ -261,7 +261,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-form">
-                                    <textarea class="text-input" id="my-text" name="mess"
+                                    <textarea class="text-input" id="my-text" name="message"
                                         placeholder="Tell me about your project" rows="1"
                                         oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"; resize(document.body, $(cointainer).outerHeight())'
                                         spellcheck="true"></textarea>
