@@ -232,6 +232,24 @@ function parallax() {
         }
     })
 
+    $(".preview-parallax").each((i, div) => {
+        if ($(div).attr("data-parallax") == "true") {
+            var top = $(div).offset().top - $(window).scrollTop()
+
+            var winHeight = $(window).height()
+
+            var divHeight = $(div).outerHeight()
+
+            inView(div, () => {
+                var child = $(div).find('img');
+
+                var x = (winHeight - 2 * top - divHeight) / (winHeight + divHeight)
+
+                child.css({ "-webkit-transform": `translate3d(0px,${x * 30}%, 0px)`, "will-change": "transform" });
+            })
+        }
+    })
+
     requestAnimationFrame(parallax)
 }
 

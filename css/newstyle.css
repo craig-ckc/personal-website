@@ -1,0 +1,118 @@
+.section {
+    padding: 120px 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 120px;
+    gap: 60px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.description .body,
+.description .section-header {
+    width: 65%;
+}
+
+.description .split {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 3.25rem;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+}
+
+
+
+.screenshot {
+    position: relative;
+    z-index: 1;
+}
+
+.screenshot .full-preview {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    -webkit-perspective: 100px;
+    -moz-perspective: 100px;
+    perspective: 100px;
+    /* TODO: move to the appropiate media query */
+    padding-bottom: 56.25%;
+}
+
+.screenshot .contained-preview {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.screenshot .full-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.screenshot .split {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 100px;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+}
+
+.screenshot .split .side .caption {
+    padding: 50px 60px 0px;
+}
+
+
+.points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 65px;
+}
+
+.key-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mv-60 {
+    margin: 60px 0px;
+}
