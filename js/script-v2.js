@@ -93,4 +93,4 @@ let tlMain = gsap
   );
 
 
-console.log("v2 working still bb");
+console.log("v2 working still not bb");
